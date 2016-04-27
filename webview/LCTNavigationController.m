@@ -6,16 +6,16 @@
 //  Copyright © 2016年 yixin. All rights reserved.
 //
 
-#import "NavigationController.h"
-#import "WebViewController.h"
+#import "LCTNavigationController.h"
+#import "LCTWebViewController.h"
 
-@interface NavigationController ()<UINavigationBarDelegate>
+@interface LCTNavigationController ()<UINavigationBarDelegate>
 
 @property BOOL shouldPopItemAfterPopViewController;
 
 @end
 
-@implementation NavigationController
+@implementation LCTNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,8 +47,8 @@
         self.shouldPopItemAfterPopViewController = NO;
         return YES;
     }
-    if ([self.topViewController isKindOfClass:[WebViewController class]]) {
-        WebViewController* webVC = (WebViewController*)self.viewControllers.lastObject;
+    if ([self.topViewController isKindOfClass:[LCTWebViewController class]]) {
+        LCTWebViewController* webVC = (LCTWebViewController*)self.viewControllers.lastObject;
         if (webVC.webView.canGoBack) {
             [webVC.webView goBack];
             

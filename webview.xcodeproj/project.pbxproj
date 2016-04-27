@@ -15,8 +15,8 @@
 		813917981CC4AC7600F6FDC5 /* webviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917971CC4AC7600F6FDC5 /* webviewUITests.m */; };
 		813917AE1CC4ACFB00F6FDC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917A51CC4ACFB00F6FDC5 /* AppDelegate.m */; };
 		813917AF1CC4ACFB00F6FDC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917A81CC4ACFB00F6FDC5 /* ViewController.m */; };
-		813917B01CC4ACFB00F6FDC5 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917AA1CC4ACFB00F6FDC5 /* NavigationController.m */; };
-		813917B11CC4ACFB00F6FDC5 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917AC1CC4ACFB00F6FDC5 /* WebViewController.m */; };
+		813917B01CC4ACFB00F6FDC5 /* LCTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917AA1CC4ACFB00F6FDC5 /* LCTNavigationController.m */; };
+		813917B11CC4ACFB00F6FDC5 /* LCTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917AC1CC4ACFB00F6FDC5 /* LCTWebViewController.m */; };
 		813917B21CC4ACFB00F6FDC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813917AD1CC4ACFB00F6FDC5 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -54,10 +54,10 @@
 		813917A61CC4ACFB00F6FDC5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		813917A71CC4ACFB00F6FDC5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		813917A81CC4ACFB00F6FDC5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		813917A91CC4ACFB00F6FDC5 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
-		813917AA1CC4ACFB00F6FDC5 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
-		813917AB1CC4ACFB00F6FDC5 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		813917AC1CC4ACFB00F6FDC5 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		813917A91CC4ACFB00F6FDC5 /* LCTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTNavigationController.h; sourceTree = "<group>"; };
+		813917AA1CC4ACFB00F6FDC5 /* LCTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTNavigationController.m; sourceTree = "<group>"; };
+		813917AB1CC4ACFB00F6FDC5 /* LCTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTWebViewController.h; sourceTree = "<group>"; };
+		813917AC1CC4ACFB00F6FDC5 /* LCTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTWebViewController.m; sourceTree = "<group>"; };
 		813917AD1CC4ACFB00F6FDC5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +86,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81040E191CD0AC9B00A897A0 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				813917A61CC4ACFB00F6FDC5 /* AppDelegate.h */,
+				813917A51CC4ACFB00F6FDC5 /* AppDelegate.m */,
+				813917A71CC4ACFB00F6FDC5 /* ViewController.h */,
+				813917A81CC4ACFB00F6FDC5 /* ViewController.m */,
+				813917AD1CC4ACFB00F6FDC5 /* Main.storyboard */,
+				8139177E1CC4AC7600F6FDC5 /* Assets.xcassets */,
+				813917801CC4AC7600F6FDC5 /* LaunchScreen.storyboard */,
+				813917831CC4AC7600F6FDC5 /* Info.plist */,
+				8139177B1CC4AC7600F6FDC5 /* webview.xcdatamodeld */,
+			);
+			name = demo;
+			sourceTree = "<group>";
+		};
+		81040E1A1CD0ACD100A897A0 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				813917A91CC4ACFB00F6FDC5 /* LCTNavigationController.h */,
+				813917AA1CC4ACFB00F6FDC5 /* LCTNavigationController.m */,
+				813917AB1CC4ACFB00F6FDC5 /* LCTWebViewController.h */,
+				813917AC1CC4ACFB00F6FDC5 /* LCTWebViewController.m */,
+			);
+			name = webview;
+			sourceTree = "<group>";
+		};
 		813917631CC4AC7500F6FDC5 = {
 			isa = PBXGroup;
 			children = (
@@ -109,19 +136,8 @@
 		8139176E1CC4AC7600F6FDC5 /* webview */ = {
 			isa = PBXGroup;
 			children = (
-				813917A51CC4ACFB00F6FDC5 /* AppDelegate.m */,
-				813917A61CC4ACFB00F6FDC5 /* AppDelegate.h */,
-				813917A71CC4ACFB00F6FDC5 /* ViewController.h */,
-				813917A81CC4ACFB00F6FDC5 /* ViewController.m */,
-				813917A91CC4ACFB00F6FDC5 /* NavigationController.h */,
-				813917AA1CC4ACFB00F6FDC5 /* NavigationController.m */,
-				813917AB1CC4ACFB00F6FDC5 /* WebViewController.h */,
-				813917AC1CC4ACFB00F6FDC5 /* WebViewController.m */,
-				813917AD1CC4ACFB00F6FDC5 /* Main.storyboard */,
-				8139177E1CC4AC7600F6FDC5 /* Assets.xcassets */,
-				813917801CC4AC7600F6FDC5 /* LaunchScreen.storyboard */,
-				813917831CC4AC7600F6FDC5 /* Info.plist */,
-				8139177B1CC4AC7600F6FDC5 /* webview.xcdatamodeld */,
+				81040E1A1CD0ACD100A897A0 /* webview */,
+				81040E191CD0AC9B00A897A0 /* demo */,
 				8139176F1CC4AC7600F6FDC5 /* Supporting Files */,
 			);
 			path = webview;
@@ -287,9 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8139177D1CC4AC7600F6FDC5 /* webview.xcdatamodeld in Sources */,
-				813917B11CC4ACFB00F6FDC5 /* WebViewController.m in Sources */,
+				813917B11CC4ACFB00F6FDC5 /* LCTWebViewController.m in Sources */,
 				813917711CC4AC7600F6FDC5 /* main.m in Sources */,
-				813917B01CC4ACFB00F6FDC5 /* NavigationController.m in Sources */,
+				813917B01CC4ACFB00F6FDC5 /* LCTNavigationController.m in Sources */,
 				813917AF1CC4ACFB00F6FDC5 /* ViewController.m in Sources */,
 				813917AE1CC4ACFB00F6FDC5 /* AppDelegate.m in Sources */,
 			);

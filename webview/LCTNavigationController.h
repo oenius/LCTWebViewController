@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface NavigationController : UINavigationController
+@interface LCTNavigationController : UINavigationController
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "WebViewController.h"
+#import "LCTWebViewController.h"
 
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
@@ -36,7 +36,7 @@
 
 - (void)click{
     NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
-    WebViewController *vc = [[WebViewController alloc]initWithUrl:url];
+    LCTWebViewController *vc = [[LCTWebViewController alloc]initWithUrl:url];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

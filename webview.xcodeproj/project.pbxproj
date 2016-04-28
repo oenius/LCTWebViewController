@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5F5CB71CD0C99F00D31E78 /* icon_app_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5F5CB61CD0C99F00D31E78 /* icon_app_back@2x.png */; };
+		1ACFD11C1CD1B94200D93A2C /* icon_app_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFD11B1CD1B94200D93A2C /* icon_app_refresh@2x.png */; };
+		1ACFD11E1CD1D27500D93A2C /* icon_app_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACFD11D1CD1D27500D93A2C /* icon_app_more@2x.png */; };
 		813917711CC4AC7600F6FDC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917701CC4AC7600F6FDC5 /* main.m */; };
 		8139177D1CC4AC7600F6FDC5 /* webview.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8139177B1CC4AC7600F6FDC5 /* webview.xcdatamodeld */; };
 		8139177F1CC4AC7600F6FDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8139177E1CC4AC7600F6FDC5 /* Assets.xcassets */; };
 		813917821CC4AC7600F6FDC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813917801CC4AC7600F6FDC5 /* LaunchScreen.storyboard */; };
-		8139178D1CC4AC7600F6FDC5 /* webviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8139178C1CC4AC7600F6FDC5 /* webviewTests.m */; };
 		813917981CC4AC7600F6FDC5 /* webviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917971CC4AC7600F6FDC5 /* webviewUITests.m */; };
 		813917AE1CC4ACFB00F6FDC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917A51CC4ACFB00F6FDC5 /* AppDelegate.m */; };
 		813917AF1CC4ACFB00F6FDC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917A81CC4ACFB00F6FDC5 /* ViewController.m */; };
-		813917B01CC4ACFB00F6FDC5 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917AA1CC4ACFB00F6FDC5 /* NavigationController.m */; };
-		813917B11CC4ACFB00F6FDC5 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917AC1CC4ACFB00F6FDC5 /* WebViewController.m */; };
+		813917B11CC4ACFB00F6FDC5 /* LCTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813917AC1CC4ACFB00F6FDC5 /* LCTWebViewController.m */; };
 		813917B21CC4ACFB00F6FDC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813917AD1CC4ACFB00F6FDC5 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5F5CB61CD0C99F00D31E78 /* icon_app_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_app_back@2x.png"; sourceTree = "<group>"; };
+		1ACFD11B1CD1B94200D93A2C /* icon_app_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_app_refresh@2x.png"; sourceTree = "<group>"; };
+		1ACFD11D1CD1D27500D93A2C /* icon_app_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_app_more@2x.png"; sourceTree = "<group>"; };
 		8139176C1CC4AC7600F6FDC5 /* webview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		813917701CC4AC7600F6FDC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8139177C1CC4AC7600F6FDC5 /* webview.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = webview.xcdatamodel; sourceTree = "<group>"; };
@@ -45,8 +49,6 @@
 		813917811CC4AC7600F6FDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		813917831CC4AC7600F6FDC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		813917881CC4AC7600F6FDC5 /* webviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8139178C1CC4AC7600F6FDC5 /* webviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webviewTests.m; sourceTree = "<group>"; };
-		8139178E1CC4AC7600F6FDC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		813917931CC4AC7600F6FDC5 /* webviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		813917971CC4AC7600F6FDC5 /* webviewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webviewUITests.m; sourceTree = "<group>"; };
 		813917991CC4AC7600F6FDC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,10 +56,8 @@
 		813917A61CC4ACFB00F6FDC5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		813917A71CC4ACFB00F6FDC5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		813917A81CC4ACFB00F6FDC5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		813917A91CC4ACFB00F6FDC5 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
-		813917AA1CC4ACFB00F6FDC5 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
-		813917AB1CC4ACFB00F6FDC5 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		813917AC1CC4ACFB00F6FDC5 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		813917AB1CC4ACFB00F6FDC5 /* LCTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTWebViewController.h; sourceTree = "<group>"; };
+		813917AC1CC4ACFB00F6FDC5 /* LCTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTWebViewController.m; sourceTree = "<group>"; };
 		813917AD1CC4ACFB00F6FDC5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,11 +86,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81040E191CD0AC9B00A897A0 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				813917A61CC4ACFB00F6FDC5 /* AppDelegate.h */,
+				813917A51CC4ACFB00F6FDC5 /* AppDelegate.m */,
+				813917A71CC4ACFB00F6FDC5 /* ViewController.h */,
+				813917A81CC4ACFB00F6FDC5 /* ViewController.m */,
+				813917AD1CC4ACFB00F6FDC5 /* Main.storyboard */,
+				8139177E1CC4AC7600F6FDC5 /* Assets.xcassets */,
+				1A5F5CB61CD0C99F00D31E78 /* icon_app_back@2x.png */,
+				1ACFD11B1CD1B94200D93A2C /* icon_app_refresh@2x.png */,
+				1ACFD11D1CD1D27500D93A2C /* icon_app_more@2x.png */,
+				813917801CC4AC7600F6FDC5 /* LaunchScreen.storyboard */,
+				813917831CC4AC7600F6FDC5 /* Info.plist */,
+				8139177B1CC4AC7600F6FDC5 /* webview.xcdatamodeld */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		81040E1A1CD0ACD100A897A0 /* LCTWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				813917AB1CC4ACFB00F6FDC5 /* LCTWebViewController.h */,
+				813917AC1CC4ACFB00F6FDC5 /* LCTWebViewController.m */,
+			);
+			name = LCTWebViewController;
+			sourceTree = "<group>";
+		};
 		813917631CC4AC7500F6FDC5 = {
 			isa = PBXGroup;
 			children = (
-				8139176E1CC4AC7600F6FDC5 /* webview */,
-				8139178B1CC4AC7600F6FDC5 /* webviewTests */,
+				8139176E1CC4AC7600F6FDC5 /* LCTWebViewController */,
 				813917961CC4AC7600F6FDC5 /* webviewUITests */,
 				8139176D1CC4AC7600F6FDC5 /* Products */,
 			);
@@ -106,24 +133,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8139176E1CC4AC7600F6FDC5 /* webview */ = {
+		8139176E1CC4AC7600F6FDC5 /* LCTWebViewController */ = {
 			isa = PBXGroup;
 			children = (
-				813917A51CC4ACFB00F6FDC5 /* AppDelegate.m */,
-				813917A61CC4ACFB00F6FDC5 /* AppDelegate.h */,
-				813917A71CC4ACFB00F6FDC5 /* ViewController.h */,
-				813917A81CC4ACFB00F6FDC5 /* ViewController.m */,
-				813917A91CC4ACFB00F6FDC5 /* NavigationController.h */,
-				813917AA1CC4ACFB00F6FDC5 /* NavigationController.m */,
-				813917AB1CC4ACFB00F6FDC5 /* WebViewController.h */,
-				813917AC1CC4ACFB00F6FDC5 /* WebViewController.m */,
-				813917AD1CC4ACFB00F6FDC5 /* Main.storyboard */,
-				8139177E1CC4AC7600F6FDC5 /* Assets.xcassets */,
-				813917801CC4AC7600F6FDC5 /* LaunchScreen.storyboard */,
-				813917831CC4AC7600F6FDC5 /* Info.plist */,
-				8139177B1CC4AC7600F6FDC5 /* webview.xcdatamodeld */,
+				81040E1A1CD0ACD100A897A0 /* LCTWebViewController */,
+				81040E191CD0AC9B00A897A0 /* Demo */,
 				8139176F1CC4AC7600F6FDC5 /* Supporting Files */,
 			);
+			name = LCTWebViewController;
 			path = webview;
 			sourceTree = "<group>";
 		};
@@ -133,15 +150,6 @@
 				813917701CC4AC7600F6FDC5 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8139178B1CC4AC7600F6FDC5 /* webviewTests */ = {
-			isa = PBXGroup;
-			children = (
-				8139178C1CC4AC7600F6FDC5 /* webviewTests.m */,
-				8139178E1CC4AC7600F6FDC5 /* Info.plist */,
-			);
-			path = webviewTests;
 			sourceTree = "<group>";
 		};
 		813917961CC4AC7600F6FDC5 /* webviewUITests */ = {
@@ -259,7 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACFD11E1CD1D27500D93A2C /* icon_app_more@2x.png in Resources */,
+				1ACFD11C1CD1B94200D93A2C /* icon_app_refresh@2x.png in Resources */,
 				813917B21CC4ACFB00F6FDC5 /* Main.storyboard in Resources */,
+				1A5F5CB71CD0C99F00D31E78 /* icon_app_back@2x.png in Resources */,
 				813917821CC4AC7600F6FDC5 /* LaunchScreen.storyboard in Resources */,
 				8139177F1CC4AC7600F6FDC5 /* Assets.xcassets in Resources */,
 			);
@@ -287,9 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8139177D1CC4AC7600F6FDC5 /* webview.xcdatamodeld in Sources */,
-				813917B11CC4ACFB00F6FDC5 /* WebViewController.m in Sources */,
+				813917B11CC4ACFB00F6FDC5 /* LCTWebViewController.m in Sources */,
 				813917711CC4AC7600F6FDC5 /* main.m in Sources */,
-				813917B01CC4ACFB00F6FDC5 /* NavigationController.m in Sources */,
 				813917AF1CC4ACFB00F6FDC5 /* ViewController.m in Sources */,
 				813917AE1CC4ACFB00F6FDC5 /* AppDelegate.m in Sources */,
 			);
@@ -299,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8139178D1CC4AC7600F6FDC5 /* webviewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,6 @@
 
 @author Jou [Email](jou@oenius.com) [Weibo](http://weibo.com/monfur) or [Github](https://github.com/oenius)
 
----
 
 ## 0. 预热
 > LCTWebViewController 是 [JARVIS](www.jarvis.studio) 小组成员 [李晨涛](https://github.com/lllcccttt) 的项目。而在 Code Review 中， 我除了在代码风格，逻辑 和 实现上修正代码了以外，还加入了一些扩展， 所以就有了现在的 LCTWebViewController。

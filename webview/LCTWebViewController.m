@@ -37,6 +37,8 @@ UIWebViewDelegate
 
 @property(nonatomic, strong) NSURL *url;
 @property(nonatomic, strong) UILabel *titleLabel;
+
+@property(nonatomic, strong) UIButton *backBtn;
 @property(nonatomic, strong) UIButton *closeBtn;
 @property(nonatomic, strong) UIButton *moreBtn;
 
@@ -96,6 +98,7 @@ UIWebViewDelegate
   [button setContentMode:UIViewContentModeLeft];
   
   [button addTarget:self action:@selector(handleBack) forControlEvents:UIControlEventTouchUpInside];
+  self.backBtn = button;
   
   UIButton *close = [UIButton buttonWithType:UIButtonTypeCustom];
   [close setFrame:CGRectMake(0, 0, 44, 84)];
@@ -131,8 +134,12 @@ UIWebViewDelegate
                                              ];
   
   self.closeBtn.hidden = YES;
-  self.moreBtn.hidden = YES;
+  self.moreBtn.hidden = self.moreAction == nil;
+  self.backBtn.hidden = self.navigationController.viewControllers.firstObject == self;
   self.view.backgroundColor = [UIColor whiteColor];
+  
+  if(self.title) self.titleLabel.text = self.title;
+  self.navigationItem.titleView = self.titleLabel;
   
   [self layoutProgressView];
   [self layoutRefreshView];
@@ -310,7 +317,7 @@ UIWebViewDelegate
 {
   if(!_trackTintColor)
   {
-    _trackTintColor = [UIColor blackColor];
+    _trackTintColor = [UIColor colorWithRed:22.f / 255.f green:126.f / 255.f blue:251.f / 255.f alpha:1.0];
   }
   return _trackTintColor;
 }
@@ -337,6 +344,12 @@ UIWebViewDelegate
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
+  
+  if([self.delegate respondsToSelector:@selector(lctWebView:shouldStartLoadWithRequest:navigationType:)])
+  {
+    return [self.delegate lctWebView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
+  }
+  
   if(!webView.request || webView.isLoading || !self.alwaysPushInNewWebController)
   {
     self.progressView.alpha = 1;
@@ -350,6 +363,7 @@ UIWebViewDelegate
   LCTWebViewController *controller = [[LCTWebViewController alloc]initWithUrl:request.URL];
   controller.trackTintColor = self.trackTintColor;
   controller.tintColor = self.tintColor;
+  controller.delegate = self.delegate;
   controller.alwaysPushInNewWebController = self.alwaysPushInNewWebController;
   [self.navigationController pushViewController:controller animated:YES];
   return NO;
@@ -357,7 +371,6 @@ UIWebViewDelegate
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-
   [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
   
   self.url = webView.request.URL;
@@ -375,6 +388,11 @@ UIWebViewDelegate
 
   self.refreshBtn.hidden = YES;
   self.refreshLabel.hidden = YES;
+  
+  if([self.delegate respondsToSelector:@selector(lctWebViewDidStartLoad:)])
+  {
+    [self.delegate lctWebViewDidStartLoad:webView];
+  }
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
@@ -394,21 +412,26 @@ UIWebViewDelegate
   } completion:^(BOOL finished) {
     if(finished)
     {
-      delay(0.8, ^{
+      delay(0.6, ^{
         self.progressView.alpha = 0;
       });
     }
   }];
   
   self.titleLabel.text = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+  if(self.title) self.titleLabel.text = self.title;
   self.navigationItem.titleView = self.titleLabel;
   
   self.wordLabel.text = [NSString stringWithFormat:@"网页由 %@ 提供",[webView.request.URL host]];
   [self.view sendSubviewToBack:self.wordLabel];
   
-  if([webView canGoBack])
+
+  self.closeBtn.hidden = ![webView canGoBack];
+  self.backBtn.hidden = !([webView canGoBack] || self.navigationController.viewControllers.firstObject != self);
+  
+  if([self.delegate respondsToSelector:@selector(lctWebViewDidFinishLoad:)])
   {
-    self.closeBtn.hidden = NO;
+    [self.delegate lctWebViewDidFinishLoad:webView];
   }
 }
 
@@ -432,6 +455,11 @@ UIWebViewDelegate
   
   self.refreshBtn.hidden = NO;
   self.refreshLabel.hidden = NO;
+  
+  if([self.delegate respondsToSelector:@selector(lctWebView:didFailLoadWithError:)])
+  {
+    [self.delegate lctWebView:webView didFailLoadWithError:error];
+  }
 }
 
 #pragma mark - navigation bar delegate
@@ -446,7 +474,7 @@ UIWebViewDelegate
   //filtered all LCTWebviewcontroller
   for(UIViewController *controlller in viewControllers)
   {
-    if([controlller isKindOfClass:[LCTWebViewController class]])
+    if([controlller isKindOfClass:[LCTWebViewController class]] && self.navigationController.viewControllers.firstObject != self)
     {
       [viewControllers removeObject:controlller];
       break;

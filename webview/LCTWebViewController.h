@@ -12,16 +12,31 @@
 /// @name LCTWebViewController
 ///---------------
 
+@protocol LCTWebViewDelegate <NSObject>
+
+@optional
+- (BOOL)lctWebView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+- (void)lctWebViewDidStartLoad:(UIWebView *)webView;
+- (void)lctWebViewDidFinishLoad:(UIWebView *)webView;
+- (void)lctWebView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
+
+@end
+
 @interface LCTWebViewController : UIViewController
 
 ///---------------
 /// @name properties for appearance
 ///---------------
 
+@property(nonatomic, weak) id<LCTWebViewDelegate> delegate;
+
 /**
  return the url current loading
  */
+
 @property(nonatomic, strong, readonly) NSURL *url;
+@property(nonatomic, strong, readonly) UIWebView *webView;
+
 @property(nonatomic, strong, readonly) UILabel *titleLabel;
 @property(nonatomic, strong, readonly) UIButton *closeBtn;
 @property(nonatomic, strong, readonly) UIButton *moreBtn;
@@ -41,6 +56,7 @@
 
 /**
  if YES request will always push in a new viewController container
+ default is NO
  */
 @property(nonatomic, assign) BOOL alwaysPushInNewWebController;
 
@@ -53,5 +69,13 @@
 init webViewController
  */
 - (id)initWithUrl:(NSURL *)url;
+
+- (void)setCMDScheme;
+
+- (void)addCMD:(NSString *)cmd forKey:(NSString *)key action:(BOOL(^)(LCTWebViewController *webViewController,NSString *action, NSDictionary *params))action;
+- (void)removeCMDForKey:(NSString *)key;
+- (void)removeAllCMDs;
+
+- (void)evaluateScript:(NSString *)script;
 
 @end
